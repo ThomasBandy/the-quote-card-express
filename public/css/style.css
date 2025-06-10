@@ -10,7 +10,9 @@ body {
     
 }
 div {
-    background-image: url("../img/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg");
+    background-image: url("../img/GSFC_20171208_Archive_e001518~orig.jpg");
+    height: 100vh;
+    position: fixed;
 }
 main {
     text-align: center;
@@ -22,6 +24,7 @@ main {
     margin: 50px;
     padding-top: 10%;
     padding-bottom: 10%;
+    position: fixed;
 }
 q {
     display: flex;
@@ -56,4 +59,14 @@ p {
     text-transform: uppercase;
     font-style: italic;
     margin-top: 10%;
+}
+@media (orientation: portrait) {
+    div {
+        height: auto;
+        width: 100%
+    }
+    main {
+        font-size: 0.66em;
+    }
+    
 }
