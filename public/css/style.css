@@ -30,6 +30,7 @@ main {
     justify-content: center;
     align-content: center;
     height: 85vh;
+    min-width: 80vw;
     border-style: solid;
     border-color: white;
     margin: 50px;
