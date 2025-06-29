@@ -10,7 +10,10 @@ require("dotenv").config();
 const cors = require("cors");
 
 app.use(cors());
-
+const corsOptions = {
+    origin: `http://localhost:${port}`
+}
+app.use(cors(corsOptions));
 app.use(express.static("./public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -28,10 +31,10 @@ async function getRandomImage() {
     }
 }
 
-app.use("/api/v1/getRandomImage", (request, response) => {
+app.use("/api/v1/getRandomImage", async (request, response) => {
     response.status(200).json({
         status: 200,
-        data: process.env.CLIENT_ID
+        data: await getRandomImage(),
     });
 });
 
